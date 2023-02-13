@@ -1,0 +1,16 @@
+Variant K-4
+
+1. kodune ülesanne
+Failid+kirjed
+
+Koostada algoritm  ja sellele üksüheselt vastav programm (C- või Java-keeles), mille abil:
+1.    failist F1 sisestatakse kirjed struktuuriga:
+    • Nimi – string,
+    • H (huvialade arv) – naturaalarvuline (0H10),
+    • Hobbi (huvialad) – stringide massiiv;
+2.    klaviatuurilt sisestatakse string Huvi;
+    3. faili F2 väljastatakse kõikide antud huviala fännide nimed ja 
+       aadressid.
+
+
+Programm peab sisaldama vähemalt kahte funktsiooni koos prototüüpide kirjeldustega mis peavad asuma teises failis.
