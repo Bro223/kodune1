@@ -1,20 +1,21 @@
 #include "head.h"
+#include <stdlib.h>
 
 void getPersons(Person persons[], int *n) {
     FILE *fp;
     char fileName[100];
 
-    printf("Enter input file name: ");
+    printf("Sisestage faili nimi (koos .txt nt failinimi.txt): ");
     scanf("%s", fileName);
 
     fp = fopen(fileName, "r");
     if (fp == NULL) {
         printf("File does not exist\n");
-        return;
+        exit(1); // Exit the program with status code 1
     }
 
     *n = 0;
-    while (fscanf(fp, "%s", persons[*n].name) == 1) {
+    while (fscanf(fp, "%s", persons[*n].name) != EOF) {
         fscanf(fp, "%d", &persons[*n].H);
         for (int i = 0; i < persons[*n].H; i++) {
             fscanf(fp, "%s", persons[*n].hobbies[i]);
@@ -23,7 +24,6 @@ void getPersons(Person persons[], int *n) {
     }
     fclose(fp);
 }
-
 void getHobbies(Person persons[], int n, char hobby[], Person fans[], int *m) {
     *m = 0;
     for (int i = 0; i < n; i++) {
@@ -41,13 +41,13 @@ void writeFans(Person fans[], int m) {
     FILE *fp;
     char fileName[100];
 
-    printf("Enter output file name: ");
+    printf("Sisestage output faili nimi (koos .txt nt failinimi.txt):  ");
     scanf("%s", fileName);
 
     fp = fopen(fileName, "w");
     if (fp == NULL) {
-        printf("File could not be created\n");
-        return;
+        printf("Faili ei saa luua\n");
+        exit(1);
     }
 
     for (int i = 0; i < m; i++) {

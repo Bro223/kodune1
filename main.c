@@ -1,8 +1,8 @@
 /**
  * File: main.c
- * Author: Aleks Bratsun 222821IACB
+ * Author: aleks bratsun 222821IACB
  * Created: 07.02.2023
- * Last edit: 19.02.2023
+ * Last edit: 
  * Kirjeldus: 1 kodune ylesanne
  */
  
@@ -23,7 +23,7 @@ int main() {
     int m;
 
     getPersons(persons, &n);
-    printf("Enter hobby: ");
+    printf("Sisesta hobi: ");
     scanf("%s", hobby);
     getHobbies(persons, n, hobby, fans, &m);
     writeFans(fans, m);
