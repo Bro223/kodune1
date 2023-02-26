@@ -1,8 +1,16 @@
 #ifndef FUNCTIONS_H
 #define FUNCTIONS_H
 
+
+
+/* INCLUDID */
 #include <stdio.h>
 #include <string.h>
+#include <stdlib.h>
+
+
+
+
 #define MAX_NAME_LEN 20
 #define MAX_HOBBIES_LEN 10
 #define MAX_HOBBY_LEN 20
